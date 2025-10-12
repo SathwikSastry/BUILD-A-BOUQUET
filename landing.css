@@ -113,8 +113,8 @@ h1{
 
 .bouquet-images img{
     width: 150px;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    cursor: url('images/bow.png') 16 16, pointer;
+    transition: none;
+    cursor: default;
     filter: brightness(1) contrast(1);
     box-shadow: none;
     border-radius: 0;
@@ -128,53 +128,42 @@ h1{
 .bouquet-images img:nth-child(4) { animation-delay: 0.7s; }
 
 .bouquet-images img:hover{
-    transform: translateY(-10px) scale(1.08);
-    filter: brightness(1.05) contrast(1.05) saturate(1.1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: none;
+    filter: brightness(1) contrast(1);
+    box-shadow: none;
 }
 
 .start-btn{
     display: inline-block;
-    background-color: transparent;
-    color: #3f2017;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: #5b4232;
     text-decoration: none;
-    padding: 16px 50px;
-    border-radius: 0;
-    border: 2px solid #3f2017;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
     font-weight: 600;
     font-size: 0.85rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s ease;
     margin-top: 40px;
-    cursor: url('images/bow.png') 16 16, pointer;
+    cursor: pointer;
     position: relative;
     z-index: 1;
     overflow: hidden;
     animation: fadeInUp 1.4s ease-out 0.8s both;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Shimmer effect on button */
-.start-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: left 0.6s ease;
-}
 
-.start-btn:hover::before {
-    left: 100%;
-}
+
+
 
 .start-btn:hover{
-    background-color: #3f2017;
-    color: white;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 35px rgba(63, 32, 23, 0.3);
+    transform: translateY(-2px) scale(1.05);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Music Control Button - Top Right */
@@ -195,7 +184,7 @@ h1{
     font-size: 0.85rem;
     font-weight: 600;
     color: #5b4232;
-    cursor: url('images/bow.png') 16 16, pointer;
+    cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;

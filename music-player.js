@@ -69,10 +69,10 @@ function updateMusicButton() {
     const button = document.getElementById('musicToggle');
     if (button) {
         if (isMusicPlaying) {
-            button.textContent = 'MUSIC OFF';
+            button.textContent = '🔇 MUSIC OFF';
             button.classList.add('playing');
         } else {
-            button.textContent = 'MUSIC ON';
+            button.textContent = '🔊 MUSIC ON';
             button.classList.remove('playing');
         }
     }
